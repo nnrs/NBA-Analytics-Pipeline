@@ -5,7 +5,7 @@ The long-term goal is to evolve this into a predictive analytics system using ma
 
 ## 🚀 Features
 - Ingest historical NBA game data from public sources (Kaggle, Basketball Reference, NBA APIs).  
-- Store cleaned data in a SQL database (SQLite for MVP, PostgreSQL for scaling).  
+- Store cleaned data in a SQL database (MYSQL for MVP, PostgreSQL for scaling).  
 - Build Power BI dashboards for:
   - Team and player performance
   - Win/loss trends
@@ -18,7 +18,7 @@ The long-term goal is to evolve this into a predictive analytics system using ma
 
 ## 🛠️ Tech Stack
 - **Data**: Kaggle datasets, Basketball Reference, NBA APIs  
-- **Database**: SQLite (MVP), PostgreSQL (future)  
+- **Database**: MYSQL (MVP), PostgreSQL (future)  
 - **ETL**: Python (`pandas`, `sqlalchemy`, `requests`)  
 - **Visualization**: Power BI  
 - **ML/AI (future)**: scikit-learn, XGBoost, PyTorch  
@@ -29,7 +29,7 @@ The long-term goal is to evolve this into a predictive analytics system using ma
 - Efficiency and shooting metrics  
 
 ## 📌 Roadmap
-1. MVP: Load Kaggle data → SQLite → Power BI dashboard  
+1. MVP: Load Kaggle data → MYSQL → Power BI dashboard  
 2. Iteration 1: PostgreSQL + automated ETL pipeline  
 3. Iteration 2: Daily updates via NBA API/web scraping  
 4. Iteration 3: Advanced analytics (rolling averages, PER, trends)  
@@ -54,17 +54,17 @@ In later iterations, real-time data ingestion and machine learning models will b
 
 ## 3. Methodology & Phases
 
-### Phase 1: MVP – Historical Data to SQLite
+### Phase 1: MVP – Historical Data to MySQL
 - Data Source: Kaggle NBA datasets / Basketball Reference CSV exports.  
 - ETL:
-  - Python script to clean and load CSV into SQLite.  
+  - Python script to clean and load CSV into MySQL.  
   - Basic schema: `games`, `players`, `teams`, `box_scores`.  
 - Dashboard:  
-  - Power BI connected to SQLite.  
+  - Power BI connected to MySQL.  
   - Visuals: win/loss %, average points per game, simple player stats.  
 
 ### Phase 2: Iteration – Database Upgrade & Automation
-- Migrate database from SQLite → PostgreSQL.  
+- Migrate database from MySQL → PostgreSQL.  
 - Write automated ETL (Python + cron/Task Scheduler).  
 - Expand schema with `play_by_play` table.  
 - Power BI dashboards with more advanced KPIs (efficiency, shooting %).  
